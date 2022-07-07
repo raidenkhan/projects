@@ -1,0 +1,40 @@
+@import 'config';
+@import 'home';
+@import 'about';
+@import 'menu';
+body{
+    background: rgba(red,0.5);
+    height: 100vh;
+}
+main{
+    height: 100%;
+    width: 100%;
+}
+header{
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+}
+.social-icons{
+    position: fixed;
+    bottom: 1rem;
+    
+   
+}
+i{
+    padding:0.3em;
+}
+i:hover{
+    color: $secondary-color;
+    
+    transform: scale(1.5) translateY(-5px);
+    transition-duration: 0.5s;
+}
+footer{
+    color: white;
+    font-weight: 700;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}

@@ -1,0 +1,28 @@
+$primary-color:#0f0c29;
+$secondary-color:#2bc0e4;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+@function set-text-color($color){
+    @if(lightness($color)>40%){
+        @return #ffff;
+    }@else{
+        @return #272727;
+    }
+}
+@mixin transition-ease-in {
+    transition: all 0.5s ease-in-out;
+}
+a{
+    text-decoration: none;
+}
+li{
+    display: inline-block;
+}

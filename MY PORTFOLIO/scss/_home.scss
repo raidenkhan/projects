@@ -1,0 +1,67 @@
+.home{
+    height: 100%;
+    padding-top: 40vh;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    background: 
+        linear-gradient(
+        to right,
+        rgba($primary-color, 0.7),
+        rgba($primary-color, 0.9)
+    ),
+        url('/img/model-1.jpg');
+    background-size:cover;
+    h2,h1{
+        color:rgba(white,1);
+    }
+    &__name{
+        font-size: 4rem;
+        border-bottom: 8px solid $secondary-color;
+        margin-bottom:4rem ;
+        }
+    &__name--last{
+        color: rgba($secondary-color,0.9);
+        font-weight: 700;
+    }
+
+}
+h1{
+    // width: max-content;
+    position: relative;
+}
+h1::before,h1::after{
+    content: " "
+    ;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+h1::before{
+     background:  linear-gradient(
+        to right,
+        rgba($primary-color, 0.7),
+        rgba($primary-color, 0.9));
+    animation: reveal 4s steps(28) 1s forwards;
+}
+h1::after{
+    width: 0.085em;
+    left: 10%;
+    background-color: black;
+    animation: reveal 3.8s steps(30) 1s forwards,blink 500ms infinite ;
+
+}
+
+@keyframes reveal {
+    to{left: 100%;}
+    
+}
+@keyframes blink {
+    to{
+        background-color: transparent;
+    }
+}
+
+

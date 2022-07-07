@@ -1,0 +1,105 @@
+.menu-btn{
+position: absolute;
+  z-index: 2;
+
+  right: 1rem;
+  top: 0.1rem;
+  height: auto;
+  width: 28px;
+  cursor: pointer;
+  @include transition-ease-in;
+  &__burger {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 28px;
+    height: 4px;
+    background: set-text-color($secondary-color);
+    @include transition-ease-in;
+    &::before{
+      position: absolute;
+      content:'';
+      background: set-text-color($secondary-color);
+      top: -8px;
+      right: 0rem;
+      width: 28px;
+      height: 4px;
+
+    }
+    &::after{
+      position: absolute;
+      content:'';
+      background: set-text-color($secondary-color);
+      top: 8px;
+      right: 0rem;
+      width: 20px;
+      height: 4px;}
+      &.invisible{
+        transform: rotate(720deg);
+        background: transparent;
+        &::before{
+          transform: rotate(45deg) translate(5px,8px);
+        }
+        &::after{
+          width: 28px;
+          transform: rotate(-45deg) translate(3px,-7px);
+        }
+      }
+}
+}
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  visibility: hidden;
+  &.open{
+    visibility: visible;
+}
+}
+.navbar{
+  display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    overflow: hidden;
+    background: $primary-color;
+    list-style-type: none;
+    padding-right: 1rem;
+    transform: translateY(-100%);
+    @include transition-ease-in;
+    &.open{
+      transform: translateY(0);
+    }
+    &__item {
+      transform: translateX(100vw);
+      @include transition-ease-in;
+      &.open{
+        transform: translateX(0);
+        @include transition-ease-in;
+      }}
+      
+    
+    &__item a{
+      text-transform:uppercase;
+      font-size: 2rem;
+      font-weight: 300px;
+      color: $secondary-color;
+      &.active{
+        color: lightcoral;
+        
+      }
+    }
+    
+    
+  }
+  .navbar__item a:hover{
+    color: aliceblue;
+  }
+@for $i from 1 through 5{
+  .navbar__item:nth-child(#{$i}){
+    transition-delay: ($i*0.1s)+0.2s;
+  }
+}
