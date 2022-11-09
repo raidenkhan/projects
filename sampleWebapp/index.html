@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="./app.js" defer></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="hamburg-contain">
+                <span class="hamburgur",id="hamburgur"></span>
+            </div>
+            <div class="autogenerate ">
+                <label for="number">Enter to autogenerate</label>
+                <input type="number" min="0" max="7" value="3">
+                <div class="buttons">
+                    <button>Generate</button>
+                    <button class="delall">DelAll</button>
+                </div>
+            </div>
+        </div>
+        <div class="mainbody">
+            
+            <button class="add-btn" id="add">+</button>
+            <ul class="listbox">
+                <li class="list-item">
+                    <input type="text" placeholder="course">
+                    <input type="number" max="10" min="1" placeholder="credit-hours">
+                    <button class="del">-</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
